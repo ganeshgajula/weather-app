@@ -3,28 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>weather app</title>
     <link rel="stylesheet" href="styles.css" />
+    <title>weather app</title>
   </head>
   <body>
-    <header>
-      <h1>Weather App</h1>
-    </header>
-
-    <section>
-      <div class="searchWeather">
+    <main id="weatherInfo">
+      <header>
+        <h1>Weather App</h1>
         <input
           id="searchCity"
           type="text"
-          placeholder="🔍        Search City"
+          placeholder="🔍                    Search City"
         />
-        <!-- <button id="submitBtn">Search</button> -->
-      </div>
-    </section>
+      </header>
 
-    <section>
-      <div id="weatherDetails"></div>
-    </section>
+      <!-- <section>
+        <div class="searchWeather">
+          <input
+            id="searchCity"
+            type="text"
+            placeholder="🔍                    Search City"
+          />
+          <button id="submitBtn">Search</button>
+        </div>
+      </section> -->
+
+      <section>
+        <div id="weatherDetails"></div>
+        <!-- <div class="weather-icon"><img src="" alt="weather icon" /></div> -->
+      </section>
+    </main>
 
     <script src="app.js"></script>
   </body>

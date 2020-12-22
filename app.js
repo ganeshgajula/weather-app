@@ -1,6 +1,7 @@
 let searchCity = document.querySelector("#searchCity");
-let searchBtn = document.querySelector("#submitBtn");
+// let searchBtn = document.querySelector("#submitBtn");
 let weatherInfo = document.querySelector("#weatherDetails");
+let icon = document.querySelector(".weather-icon");
 let code;
 
 const serverUrl = "https://api.openweathermap.org/data/2.5/weather?q=";
@@ -33,6 +34,10 @@ let months = [
 ];
 
 let today = new Date();
+let hours = today.getHours();
+let minutes = today.getMinutes();
+let seconds = today.getSeconds();
+
 let condition;
 
 function constructUrl(city) {
@@ -57,15 +62,36 @@ function searchWeatherHandler(event) {
       .then((json) => {
         code = json.cod;
         weatherInfo.innerHTML = `
-          <div>Temperature: ${json.main.temp}</div>
+        <h1 class="location"> ${json.name}, ${json.sys.country}  Weather</h1>
+        <div class="dateinfo">as of ${today.getDate()} ${
+          months[today.getMonth()]
+        } (${
+          days[today.getDay()]
+        }), ${today.getFullYear()} ${hours}:${minutes}:${seconds} hrs</div> 
+        <div class="flex-items">
+          <div class="inner-flex">
+            <span class="temp">${json.main.temp}&deg;</span>
+            <span class="weather-icon"><img src="/icons/${
+              json.weather[0].icon
+            }.png" alt="weather icon" /></span>
+          </div>
+          <div class="inner-flex">
+            <span class="innerText">${json.weather[0].main}</span>
+            <span class="innerText">${json.main.temp_min}&deg;(min) / ${
+          json.main.temp_max
+        }&deg;(max)</span>
+          </div>
+        </div>
+
+        <h2>Weather Today in ${json.name}, ${json.sys.country}</h2>
+        <span class="temp">${json.main.feels_like}&deg;</span>
+        
+          
           <div>Min Temp: ${json.main.temp_min}</div>
           <div>Max Temp: ${json.main.temp_max}</div>
-          <div>Feels Like: ${json.main.feels_like}</div>
           <div>Pressure: ${json.main.pressure}</div>
           <div>Humidity: ${json.main.humidity}</div>
-          <div>Weather: ${json.weather[0].main}</div>
-          <div>Location: ${json.name}</div>
-          <div>Country: ${json.sys.country}</div>
+        
           <div>${today.getDate()} ${months[today.getMonth()]} (${
           days[today.getDay()]
         }), ${today.getFullYear()}</div>
