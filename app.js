@@ -67,7 +67,7 @@ function searchWeatherHandler(event) {
           months[today.getMonth()]
         } (${
           days[today.getDay()]
-        }), ${today.getFullYear()} ${hours}:${minutes}:${seconds} hrs</div> 
+        }), ${today.getFullYear()} ${hours}:${minutes}:${seconds} Hrs</div> 
         <div class="flex-items">
           <div class="inner-flex">
             <span class="temp">${json.main.temp}&deg;</span>
@@ -84,17 +84,50 @@ function searchWeatherHandler(event) {
         </div>
 
         <h2>Weather Today in ${json.name}, ${json.sys.country}</h2>
-        <span class="temp">${json.main.feels_like}&deg;</span>
         
+        <div class="flex-items">
+        <span class="tempFeel">${json.main.feels_like}&deg;</span>
+        <span>Feels Like</span>
+        </div>
+        <hr>
+        <div class="flex-left">
+        <div>
+          <div class="extra-info">
+          <span><i class="fas fa-temperature-low "></i> High/Low</span> 
+          <span>${json.main.temp_min}&deg;/${json.main.temp_max}&deg;</span>
+          </div>
+          <hr>
+          <div class="extra-info">
+          <span><i class="fas fa-tint"></i> Humidity</span> 
+          <span>${json.main.humidity}%</span>
+          </div>
+          <hr>
+          <div class="extra-info">
+          <span><i class="fas fa-arrows-alt-v"></i> Pressure</span> 
+          <span>${json.main.pressure}m/s</span>
+          </div>
+        </div> 
+        </div>
+        <div class="flex-right">
           
-          <div>Min Temp: ${json.main.temp_min}</div>
-          <div>Max Temp: ${json.main.temp_max}</div>
-          <div>Pressure: ${json.main.pressure}</div>
-          <div>Humidity: ${json.main.humidity}</div>
-        
-          <div>${today.getDate()} ${months[today.getMonth()]} (${
-          days[today.getDay()]
-        }), ${today.getFullYear()}</div>
+            <hr>
+            <div class="extra-info">
+              <span><i class="fas fa-eye"></i> Visibility</span> 
+              <span>${json.visibility}Km</span>
+            </div>
+            <hr>
+            <div class="extra-info">
+              <span><i class="fas fa-wind"></i> Wind</span> 
+              <span>${json.wind.speed}Km/h</span>
+            </div>
+            <hr>
+            <div class="extra-info">
+              <span><i class="fas fa-cloud"></i> Clouds</span> 
+              <span>${json.clouds.all}%</span>
+            </div>
+          
+        </div>
+          
           
         `;
       })
