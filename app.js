@@ -82,7 +82,7 @@ function searchWeatherHandler(event) {
               }</span>
               <span class="innerText" id="min-max">${Math.floor(
                 json.main.temp_min
-              )}&deg;(min) / ${Math.ceil(json.main.temp_max)}&deg;(max)</span>
+              )}&deg; / ${Math.ceil(json.main.temp_max)}&deg;</span>
             </div>
           </div>
         </div>  
