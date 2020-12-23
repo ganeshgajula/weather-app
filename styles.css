@@ -7,9 +7,9 @@
 }
 
 body {
-  height: 150vh;
   background: url("/bgImage.jpg") no-repeat center center/cover;
   font-family: "Montserrat", sans-serif;
+  height: 100%;
 }
 
 header,
@@ -124,7 +124,7 @@ hr {
 #bottomContent {
   background-color: white;
   color: #2b2b2b;
-  /* padding: 1rem; */
+  padding-bottom: 1rem;
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
 }
@@ -136,6 +136,54 @@ hr {
 #description,
 #min-max {
   font-weight: bold;
+}
+
+.footer {
+  /* background-color: va */
+  padding: 2rem 1rem;
+  margin-top: 2rem;
+  text-align: center;
+  color: white;
+  border-top-right-radius: 1rem;
+}
+
+.footer .link {
+  color: white;
+}
+
+.footer .footer-header {
+  margin-top: 0.8rem;
+  font-weight: bold;
+  font-size: large;
+}
+
+.footer ul {
+  padding-inline-start: 0px;
+}
+
+.social {
+  max-width: 600px;
+  margin: auto;
+  /* display: flex;
+  justify-content: space-around; */
+}
+
+.social i {
+  padding: 1rem 2rem;
+  color: white;
+}
+
+.social .fa-linkedin-in:hover {
+  color: #0072b1;
+}
+.social .fa-twitter:hover {
+  color: #1da1f2;
+}
+.social .fa-github:hover {
+  color: #211f1f;
+}
+.social .fa-dev:hover {
+  color: #08090a;
 }
 
 @media (max-width: 500px) {
