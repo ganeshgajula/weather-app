@@ -107,9 +107,9 @@ function searchWeatherHandler(event) {
               <div>
                 <div class="extra-info">
                   <span><i class="fas fa-temperature-low "></i> High/Low</span> 
-                  <span>${json.main.temp_min}&deg;/${
+                  <span>${Math.floor(json.main.temp_min)}&deg;/${Math.ceil(
           json.main.temp_max
-        }&deg;</span>
+        )}&deg;</span>
                 </div>
                 <hr>
                 <div class="extra-info">
