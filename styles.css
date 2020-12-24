@@ -149,6 +149,7 @@ hr {
 
 .footer {
   background-color: #2b2b2b;
+
   padding: 1rem 1rem;
   margin-top: 12rem;
   text-align: center;
@@ -197,7 +198,36 @@ hr {
   color: #08090a;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 320px) {
+  #weatherInfo {
+    max-width: 250px;
+    margin: auto;
+  }
+
+  .flex-left {
+    max-width: 250px;
+    border-bottom-left-radius: 0;
+  }
+
+  .flex-right {
+    max-width: 250px;
+    border-bottom-left-radius: 1rem;
+  }
+
+  hr {
+    width: 250px;
+  }
+
+  #last {
+    padding-bottom: 0.2rem;
+  }
+
+  .footer {
+    margin-top: 22rem;
+  }
+}
+
+@media (min-width: 330px) and (max-width: 600px) {
   input {
     width: 60%;
   }
@@ -238,5 +268,9 @@ hr {
 
   #last {
     padding-bottom: 0;
+  }
+
+  .social i {
+    padding: 1rem;
   }
 }
