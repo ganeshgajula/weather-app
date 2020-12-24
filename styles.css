@@ -228,5 +228,7 @@ hr {
 
   #bottomContent {
     padding-bottom: 0;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
   }
 }
