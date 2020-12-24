@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
 
 * {
-  /* padding: 0;
-  margin: 0; */
+  /* padding: 0; */
+  margin: 0;
   box-sizing: border-box;
 }
 
@@ -20,6 +20,7 @@ header,
 header h1 {
   color: white;
   font-size: 2.5rem;
+  padding: 1.5rem 0;
 }
 
 input {
@@ -133,18 +134,22 @@ hr {
   padding: 0.5rem 1rem;
 }
 
+.bottom-second {
+  margin-bottom: 2rem;
+}
+
 #description,
 #min-max {
   font-weight: bold;
 }
 
 .footer {
-  /* background-color: va */
-  padding: 2rem 1rem;
-  margin-top: 2rem;
+  background-color: #1f2937;
+  padding: 1rem 1rem;
+  margin-top: 10rem;
   text-align: center;
   color: white;
-  border-top-right-radius: 1rem;
+  /* border-top-right-radius: 1rem; */
 }
 
 .footer .link {
@@ -152,6 +157,8 @@ hr {
 }
 
 .footer .footer-header {
+  text-align: center;
+
   margin-top: 0.8rem;
   font-weight: bold;
   font-size: large;
@@ -209,5 +216,9 @@ hr {
   .flex-right {
     max-width: 340px;
     float: none;
+  }
+
+  .footer {
+    margin-top: 1rem;
   }
 }

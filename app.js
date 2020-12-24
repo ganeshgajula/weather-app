@@ -96,47 +96,49 @@ function searchWeatherHandler(event) {
               json.main.feels_like
             )}&deg;</span>
             <span>Feels Like</span>
+            </div>
           </div>
-          </div>
-          <div class="flex-left">
-            <hr>
-            <div>
-              <div class="extra-info">
-                <span><i class="fas fa-temperature-low "></i> High/Low</span> 
-                <span>${json.main.temp_min}&deg;/${
+          <div class="bottom-second">
+            <div class="flex-left">
+              <hr>
+              <div>
+                <div class="extra-info">
+                  <span><i class="fas fa-temperature-low "></i> High/Low</span> 
+                  <span>${json.main.temp_min}&deg;/${
           json.main.temp_max
         }&deg;</span>
-              </div>
-              <hr>
-              <div class="extra-info">
-                <span><i class="fas fa-tint"></i> Humidity</span> 
-                <span>${json.main.humidity}%</span>
-              </div>
-              <hr>
-              <div class="extra-info" id="last">
-                <span><i class="fas fa-arrows-alt-v"></i> Pressure</span> 
-                <span>${json.main.pressure}mb</span>
-              </div>
-            </div> 
-          </div>
-          <div class="flex-right">
-            
-              <hr>
-              <div class="extra-info">
-                <span><i class="fas fa-eye"></i> Visibility</span> 
-                <span>${json.visibility}m</span>
-              </div>
-              <hr>
-              <div class="extra-info">
-                <span><i class="fas fa-wind"></i> Wind</span> 
-                <span>${json.wind.speed}m/s</span>
-              </div>
-              <hr>
-              <div class="extra-info" id="last">
-                <span><i class="fas fa-cloud"></i> Clouds</span> 
-                <span>${json.clouds.all}%</span>
-              </div>
-            
+                </div>
+                <hr>
+                <div class="extra-info">
+                  <span><i class="fas fa-tint"></i> Humidity</span> 
+                  <span>${json.main.humidity}%</span>
+                </div>
+                <hr>
+                <div class="extra-info" id="last">
+                  <span><i class="fas fa-arrows-alt-v"></i> Pressure</span> 
+                  <span>${json.main.pressure}mb</span>
+                </div>
+              </div> 
+            </div>
+            <div class="flex-right">
+              
+                <hr>
+                <div class="extra-info">
+                  <span><i class="fas fa-eye"></i> Visibility</span> 
+                  <span>${json.visibility}m</span>
+                </div>
+                <hr>
+                <div class="extra-info">
+                  <span><i class="fas fa-wind"></i> Wind</span> 
+                  <span>${json.wind.speed}m/s</span>
+                </div>
+                <hr>
+                <div class="extra-info" id="last">
+                  <span><i class="fas fa-cloud"></i> Clouds</span> 
+                  <span>${json.clouds.all}%</span>
+                </div>
+              
+            </div>
           </div>
         </div>
           
