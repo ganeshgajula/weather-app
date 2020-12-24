@@ -2,7 +2,10 @@ let searchCity = document.querySelector("#searchCity");
 // let searchBtn = document.querySelector("#submitBtn");
 let weatherInfo = document.querySelector("#weatherDetails");
 let icon = document.querySelector(".weather-icon");
+let footer = document.querySelector(".footer");
 let code;
+
+footer.style.display = "none";
 
 const serverUrl = "https://api.openweathermap.org/data/2.5/weather?q=";
 
@@ -146,6 +149,8 @@ function searchWeatherHandler(event) {
         `;
       })
       .catch(errorHandler);
+
+    footer.style.display = "block";
   }
   // console.log(code);
   // if (city === "") {
