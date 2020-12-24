@@ -225,4 +225,8 @@ hr {
   hr {
     width: 330px;
   }
+
+  #last {
+    padding-bottom: 0.2rem;
+  }
 }
