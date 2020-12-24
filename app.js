@@ -144,13 +144,32 @@ function searchWeatherHandler(event) {
             </div>
           </div>
         </div>
-          
-          
         `;
+        footer.innerHTML = `
+        <span class="footer-header">You can connect with me on</span>
+        <div class="social social-icons">
+          <a
+            target="_blank"
+            href="https://www.linkedin.com/in/ganesh-gajula-5ab558170/"
+            ><i class="fab fa-linkedin-in fa-2x"></i
+          ></a>
+          <a target="_blank" href="https://twitter.com/GaneshGajula18"
+            ><i class="fab fa-twitter fa-2x"></i
+          ></a>
+          <a target="_blank" href="https://github.com/ganeshgajula"
+            ><i class="fab fa-github fa-2x"></i
+          ></a>
+          <a target="_blank" href="https://dev.to/ganeshgajula"
+            ><i class="fab fa-dev fa-2x"></i
+          ></a>
+        </div>
+        <p>&copy; 2020 | NEOCODER</p>
+        `;
+        footer.style.display = "block";
       })
       .catch(errorHandler);
 
-    footer.style.display = "block";
+    // footer.style.display = "block";
   }
   // console.log(code);
   // if (city === "") {
