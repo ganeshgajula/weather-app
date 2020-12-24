@@ -198,24 +198,29 @@ hr {
   color: #08090a;
 }
 
-@media (max-width: 320px) {
+@media (max-width: 360px) {
+  header h1 {
+    max-width: 280px;
+    font-size: 2.2rem;
+  }
+
   #weatherInfo {
-    max-width: 250px;
+    max-width: 270px;
     margin: auto;
   }
 
   .flex-left {
-    max-width: 250px;
+    max-width: 270px;
     border-bottom-left-radius: 0;
   }
 
   .flex-right {
-    max-width: 250px;
+    max-width: 270px;
     border-bottom-left-radius: 1rem;
   }
 
   hr {
-    width: 250px;
+    width: 270px;
   }
 
   #last {
@@ -225,9 +230,13 @@ hr {
   .footer {
     margin-top: 22rem;
   }
+
+  .social i {
+    padding: 1rem 0.8rem;
+  }
 }
 
-@media (min-width: 330px) and (max-width: 600px) {
+@media (min-width: 361px) and (max-width: 600px) {
   input {
     width: 60%;
   }
