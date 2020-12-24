@@ -79,6 +79,10 @@ input {
   padding-bottom: 1.2rem;
 }
 
+#last-item {
+  padding-bottom: 1.2rem;
+}
+
 hr {
   width: 299px;
   margin: 1rem 0;
@@ -230,5 +234,9 @@ hr {
     padding-bottom: 0;
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
+  }
+
+  #last {
+    padding-bottom: 0;
   }
 }

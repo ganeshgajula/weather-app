@@ -136,7 +136,7 @@ function searchWeatherHandler(event) {
                   <span>${json.wind.speed}m/s</span>
                 </div>
                 <hr>
-                <div class="extra-info" id="last">
+                <div class="extra-info" id="last-item">
                   <span><i class="fas fa-cloud"></i> Clouds</span> 
                   <span>${json.clouds.all}%</span>
                 </div>
